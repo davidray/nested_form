@@ -1,7 +1,5 @@
-<%= nested_form_for @project do |f| -%>
-  <%= f.text_field :name %>
+<%= nested_form_for Project.new do |f| -%>
   <%= f.fields_for :tasks do |tf| -%>
-    <%= tf.text_field :name %>
     <%= tf.fields_for :milestones do |mf| %>
       <%= mf.text_field :name %>
       <%= mf.link_to_remove 'Remove milestone' %>
