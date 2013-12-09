@@ -5511,7 +5511,7 @@ Form.EventObserver = Class.create(Abstract.EventObserver, {
 
     var additionalMethods = {
       stopPropagation: function() { this.cancelBubble = true },
-      preventDefault:  function() { this.returnValue = false },
+      preventDefault:  function() { this.preventDefault() },
       inspect: function() { return '[object Event]' }
     };
 

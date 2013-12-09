@@ -3567,7 +3567,7 @@ jQuery.Event.prototype = {
 
 		// otherwise set the returnValue property of the original event to false (IE)
 		} else {
-			e.returnValue = false;
+			e.preventDefault();
 		}
 	},
 	stopPropagation: function() {
